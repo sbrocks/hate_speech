@@ -1,7 +1,7 @@
 import numpy as np 
 import pandas as pd 
 
-data = pd.read_csv('/floyd/input/dataset/train_tweets.csv')
+data = pd.read_csv('train_tweets.csv')
 print(data.head(5))
 
 import os
@@ -21,8 +21,6 @@ from keras.models import model_from_json
 from keras.utils.np_utils import to_categorical
 
 
-# Download the data:
-# https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 # Download the word vectors:
 # http://nlp.stanford.edu/data/glove.6B.zip
 
@@ -40,7 +38,7 @@ EPOCHS = 5
 # load in pre-trained word vectors
 print('Loading word vectors...')
 word2vec = {}
-with open(os.path.join('/floyd/input/dataset/glove.6B/glove.6B.100d.txt'),encoding='utf-8') as f:
+with open(os.path.join('glove.6B/glove.6B.100d.txt'),encoding='utf-8') as f:
   # is just a space-separated text file in the format:
   # word vec[0] vec[1] vec[2] ...
   for line in f:
