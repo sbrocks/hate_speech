@@ -78,8 +78,8 @@ def preprocess(sentences):
 	print(pred)
 
 	print("Output values:")
-	print("Not    :  "+str(round(1-pred[0][0]*100,2))+"%")
-	print("Racist/Sexist   :  "+str(round((pred[0][0])*100,2))+"%")
+	print("Not    :  "+str(round((1-pred[0][0])*100,2))+"%")
+	print("Racist/Sexist   :  "+str(round(pred[0][0]*100,2))+"%")
 	
 
 
